@@ -6,6 +6,8 @@ import pl.wszib.memoryapi.data.repositories.CategoryRepository;
 import pl.wszib.memoryapi.web.models.CategoryRequest;
 import pl.wszib.memoryapi.web.models.CategoryResponse;
 
+import java.util.List;
+
 @Service
 public class CategoryService {
 
@@ -21,5 +23,12 @@ public class CategoryService {
         CategoryEntity savedCategory = categoryRepository.save(categoryEntity);
 
         return new CategoryResponse(savedCategory);
+    }
+
+    public List<CategoryResponse> fetchAll() {
+        return categoryRepository.findAll()
+                .stream()
+                .map(c -> new CategoryResponse(c))
+                .toList();
     }
 }
