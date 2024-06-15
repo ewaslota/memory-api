@@ -55,4 +55,8 @@ public class CategoryService {
                .map(CategoryResponse::new)
                .orElseThrow(NotFoundException::new);
     }
+
+    public void removeCategory(Long categoryId) {
+        categoryRepository.deleteById(categoryId);
+    }
 }
