@@ -1,4 +1,4 @@
-package pl.wszib.memoryapi;
+package pl.wszib.memoryapi.web.models;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
