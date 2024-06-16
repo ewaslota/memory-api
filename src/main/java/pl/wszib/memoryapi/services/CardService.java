@@ -47,4 +47,13 @@ public class CardService {
                 .map(c -> new CardResponse(categoryId, c))
                 .toList();
     }
+
+    @Transactional
+    public void removeCard(Long categoryId, Long cardId) {
+//        cardRepository.findByIdAndCategoryId(cardId, categoryId)
+//                .ifPresent(cardRepository::delete);
+
+        categoryRepository.findById(categoryId)
+                .ifPresent(category -> category.removeCard(cardId));
+    }
 }
