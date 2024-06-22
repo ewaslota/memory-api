@@ -1,0 +1,18 @@
+meta {
+  name: Create Card
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/categories/2/cards
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "term": "Pineapple",
+    "definition": "Ananas"
+  }
+}
