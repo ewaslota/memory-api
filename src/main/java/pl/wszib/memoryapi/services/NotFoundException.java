@@ -1,4 +1,4 @@
 package pl.wszib.memoryapi.services;
 
-public class NotFoundException extends  RuntimeException {
+public class NotFoundException extends RuntimeException {
 }

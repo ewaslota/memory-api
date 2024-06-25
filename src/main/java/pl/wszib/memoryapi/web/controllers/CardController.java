@@ -1,6 +1,5 @@
 package pl.wszib.memoryapi.web.controllers;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("categories/{categoryId}/cards")
-@CrossOrigin
 public class CardController {
-
     private final CardService cardService;
 
     public CardController(CardService cardService) {
@@ -27,7 +24,6 @@ public class CardController {
         CardResponse createdCard = cardService.createCard(categoryId, request);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCard);
-
     }
 
     @GetMapping

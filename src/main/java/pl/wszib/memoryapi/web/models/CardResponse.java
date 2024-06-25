@@ -1,7 +1,6 @@
 package pl.wszib.memoryapi.web.models;
 
 import pl.wszib.memoryapi.data.entities.CardEntity;
-import pl.wszib.memoryapi.data.repositories.CardRepository;
 
 public record CardResponse(Long id, Long categoryId, String term, String definition) {
 

@@ -1,6 +1,5 @@
 package pl.wszib.memoryapi.data.entities;
 
-
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -8,13 +7,13 @@ import java.util.Date;
 @Entity
 @Table(name = "cards")
 public class CardEntity {
-
     @Id
     @GeneratedValue
     private Long id;
     private String term;
     private String definition;
     private Date createdDate;
+
 
     public CardEntity(String term, String definition) {
         this.term = term;

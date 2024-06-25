@@ -14,7 +14,6 @@ public class CategoryEntity {
     private Long id;
     private String name;
     private Date createdDate;
-
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "category_id")
     private Set<CardEntity> cards = new HashSet<>();
@@ -43,12 +42,12 @@ public class CategoryEntity {
         return createdDate;
     }
 
-    public void  addCard(CardEntity card) {
+    public void addCard(CardEntity card) {
         this.cards.add(card);
     }
 
     public Set<CardEntity> getCards() {
-        return  Set.copyOf(cards);
+        return Set.copyOf(cards);
     }
 
     public void removeCard(Long cardId) {

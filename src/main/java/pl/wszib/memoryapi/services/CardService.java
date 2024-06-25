@@ -1,7 +1,7 @@
 package pl.wszib.memoryapi.services;
 
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pl.wszib.memoryapi.data.entities.CardEntity;
 import pl.wszib.memoryapi.data.entities.CategoryEntity;
 import pl.wszib.memoryapi.data.repositories.CardRepository;
@@ -14,8 +14,7 @@ import java.util.List;
 @Service
 public class CardService {
 
-
-    private  final CardRepository cardRepository;
+    private final CardRepository cardRepository;
     private final CategoryRepository categoryRepository;
 
     public CardService(CardRepository cardRepository, CategoryRepository categoryRepository) {
